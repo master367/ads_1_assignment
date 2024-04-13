@@ -4,8 +4,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Choose a task:");
+
+
+
+
+
+
+        System.out.print("Choose a task(defence task = 11: ");
         int whatProblem = sc.nextInt();
+
         if (whatProblem == 1) { // 1 problem
 
             System.out.print("Enter length of an array:");
@@ -119,8 +126,18 @@ public class Main {
 
             System.out.println("GCD(" + a + ", " + b + "): " + problem10.GCD(a, b));
         }
-        else{
-            System.out.println("choose from 1 to 10");
+        else if (whatProblem == 11){
+            sc.nextLine();
+
+            String s = sc.nextLine();
+
+            if(defence.palindrom(s))
+                System.out.println("palindrom");
+            else
+                System.out.println("no");
+
+        } else{
+            System.out.println("choose from 1 to 11");
         }
     }
 
